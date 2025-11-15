@@ -1,0 +1,30 @@
+{
+  "header": {
+    "title": "Portfolio",
+    "navigation": {
+      "about": "about",
+      "stack": "Stack and Projects",
+      "Call": "Call"
+    },
+    "button": "Change language",
+    "download": "download my resume"
+  },
+  "main": {
+    "aboutMe": {
+      "title": "About me",
+      "p": "My name is Nikita. I am a frontend developer specializing in building modern\n  web interfaces using React, TypeScript, and Tailwind. I follow principles of\n  clean architecture, strict typing, and predictable application behavior.\n  I pay close attention to code quality, clarity of implementation, and the long-term\n  maintainability of the project.  \n  I continuously explore new tools and approaches to expand my expertise and remain\n  effective in a rapidly evolving industry."
+    },
+    "projects": {
+      "title": "My projects",
+      "open": "Open"
+    },
+    "TechStack": "Tech Stack"
+  },
+  "footer": {
+    "phone": "number: +7-986-755-98-72",
+    "mail": "Email: krasilnikovnikita11@gmail.com",
+    "telegram": "telegram: @nikitos_ia",
+    "WatsApp": "WatsApp: +7-986-755-98-72",
+    "GitHub": "GitHub: NikApng"
+  }
+}

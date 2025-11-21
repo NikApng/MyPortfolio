@@ -26,5 +26,22 @@
     "telegram": "telegram: @nikitos_ia",
     "WatsApp": "WatsApp: +7-986-755-98-72",
     "GitHub": "GitHub: NikApng"
+  },
+  "proj": {
+    "TzJs": {
+      "desc": "The first version I built. I wanted to add boards as well, but at that time I didn’t have enough knowledge."
+    },
+    "DogLead": {
+      "desc": "A full e-commerce website with catalog, products and admin panel."
+    },
+    "RedFax": {
+      "desc": "A multifunctional messenger with chats and audio/video calls."
+    },
+    "TzList": {
+      "desc": "A task-management app with fast UI and clear structure."
+    },
+    "Market": {
+      "desc": "A mini-market using a free API, featuring catalog and cart."
+    }
   }
 }

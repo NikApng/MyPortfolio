@@ -46,9 +46,7 @@ function Projects({projectsRef}) {
                                     {proj.title}
                                 </h2>
 
-                                <p className="text-lg dark:text-gray-200 mb-4">
-                                    {proj.description}
-                                </p>
+                                <p>{t(`${proj.description}`)}</p>
 
                                 <div className="flex flex-wrap gap-2 mb-5">
                                     {proj.stack.map((item) => (

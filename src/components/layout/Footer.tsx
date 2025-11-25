@@ -1,35 +1,44 @@
 import React from 'react';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import OpendIt from "../../../public/icons/OpendIt.tsx";
 
-function Footer(props) {
-    const {t} = useTranslation()
+function Footer() {
+    const { t } = useTranslation();
 
     return (
         <footer
             className="
-    text-black dark:text-white
-    bg-white dark:bg-black/30
-    rounded-2xl shadow-xl dark:shadow-lg
-    m-2 p-4
-  "
+        w-auto
+        text-black dark:text-white
+        bg-white dark:bg-black/30
+        rounded-2xl shadow-xl dark:shadow-lg
+        m-2 px-4 py-5 sm:px-6
+      "
         >
-            <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
+            <div className="max-w-4xl mx-auto flex flex-col items-center gap-4 sm:gap-5">
 
-                <div className="text-lg dark:text-gray-300">
+                <div className="text-base sm:text-lg dark:text-gray-300 text-center">
                     {t("footer.phone")}
                 </div>
 
-                <ul className="flex flex-row items-center gap-8">
+                <ul
+                    className="
+            flex flex-wrap
+            justify-center
+            items-center
+            gap-4 sm:gap-6 lg:gap-8
+            text-sm sm:text-base
+          "
+                >
                     <li>
                         <a
                             href=""
                             className="
-            inline-flex items-center gap-1
-            border border-transparent
-            hover:border-black dark:hover:border-white
-            p-1 rounded-lg duration-300
-          "
+                inline-flex items-center gap-1
+                border border-transparent
+                hover:border-black dark:hover:border-white
+                px-2 py-1 rounded-lg duration-300
+              "
                         >
                             {t("footer.mail")} <OpendIt />
                         </a>
@@ -39,11 +48,11 @@ function Footer(props) {
                         <a
                             href="https://t.me/nikitos_ia"
                             className="
-            inline-flex items-center gap-1
-            border border-transparent
-            hover:border-black dark:hover:border-white
-            p-1 rounded-lg duration-300
-          "
+                inline-flex items-center gap-1
+                border border-transparent
+                hover:border-black dark:hover:border-white
+                px-2 py-1 rounded-lg duration-300
+              "
                         >
                             {t("footer.telegram")} <OpendIt />
                         </a>
@@ -53,11 +62,11 @@ function Footer(props) {
                         <a
                             href=""
                             className="
-            inline-flex items-center gap-1
-            border border-transparent
-            hover:border-black dark:hover:border-white
-            p-1 rounded-lg duration-300
-          "
+                inline-flex items-center gap-1
+                border border-transparent
+                hover:border-black dark:hover:border-white
+                px-2 py-1 rounded-lg duration-300
+              "
                         >
                             {t("footer.WatsApp")} <OpendIt />
                         </a>
@@ -67,11 +76,11 @@ function Footer(props) {
                         <a
                             href="https://github.com/NikApng"
                             className="
-            inline-flex items-center gap-1
-            border border-transparent
-            hover:border-black dark:hover:border-white
-            p-1 rounded-lg duration-300
-          "
+                inline-flex items-center gap-1
+                border border-transparent
+                hover:border-black dark:hover:border-white
+                px-2 py-1 rounded-lg duration-300
+              "
                         >
                             {t("footer.GitHub")} <OpendIt />
                         </a>
@@ -80,7 +89,6 @@ function Footer(props) {
 
             </div>
         </footer>
-
     );
 }
 

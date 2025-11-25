@@ -13,30 +13,36 @@ export const projects = [
     },
     {
         id: 3,
-        title: "TZ-List",
+        title: "TZ-List v2 React",
         description: "proj.TzList.desc",
-        link: "https://github.com/NikApng/TZList",
-        stack: ["React", "TypeScript", "Tailwind", "Zustand"]
+        link: "https://github.com/NikApng/Tz-List-React",
+        stack: ["React", "TypeScript", "Tailwind", "Redux Tool Kit"]
     },
     {
         id: 4,
         title: "Mini-Market",
         description: "proj.Market.desc",
         link: "https://github.com/NikApng/Market",
-        stack: ["React", "JavaScript", "Tailwind", "RTK", "Vite"]
+        stack: ["React", "JavaScript", "Tailwind", "Redux Tool Kit", "Vite"]
     },
     {
         id: 5,
-        title: "TzList-JavaScript",
+        title: "TZ-List v1 JavaScript",
         description: "proj.TzJs.desc",
         link: "https://github.com/NikApng/TZ-list",
         stack: ["React", "JavaScript", "scss"]
     },
     {
         id: 6,
+        title: "Ruqi.ru",
+        description: "proj.TzJs.desc",
+        stack: ["Vue", "JavaScript", "BootStrap"]
+    },
+    {
+        id: 7,
         title: "Portfolio initial code",
         description: "proj.Portfolio.desc",
         link: "https://github.com/NikApng/MyPortfolio",
-        stack: ["React", "JavaScript", "scss"]
+        stack: ["React", "JavaScript", "Tailwind", "i18n"]
     }
 ];

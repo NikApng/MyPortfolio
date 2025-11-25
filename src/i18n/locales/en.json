@@ -2,9 +2,9 @@
   "header": {
     "title": "Portfolio",
     "navigation": {
-      "about": "about",
-      "stack": "Stack and Projects",
-      "Call": "Call"
+      "about": "About",
+      "stack": "Projects",
+      "Call": "Languages"
     },
     "button": "Change language",
     "download": "download my resume"
@@ -12,7 +12,7 @@
   "main": {
     "aboutMe": {
       "title": "About me",
-      "p": "My name is Nikita. I am a frontend developer specializing in building modern\n  web interfaces using React, TypeScript, and Tailwind. I follow principles of\n  clean architecture, strict typing, and predictable application behavior.\n  I pay close attention to code quality, clarity of implementation, and the long-term\n  maintainability of the project.  \n  I continuously explore new tools and approaches to expand my expertise and remain\n  effective in a rapidly evolving industry."
+      "p": "My name is Nikita. I’m a frontend developer who builds modern, clean interfaces with React, TypeScript, and Tailwind.\nI enjoy shaping clear architecture, keeping projects organized, and writing code that still feels good to maintain a year later.\n\nI follow new tools and approaches, steadily improving my stack and aiming to create products that are not just functional — but fast, polished, and reliable."
     },
     "projects": {
       "title": "My projects",
@@ -23,11 +23,12 @@
   "footer": {
     "phone": "number: +7-986-755-98-72",
     "mail": "Email: krasilnikovnikita11@gmail.com",
-    "telegram": "telegram: @nikitos_ia",
+    "telegram": "Telegram: @nikitos_ia",
     "WatsApp": "WatsApp: +7-986-755-98-72",
     "GitHub": "GitHub: NikApng"
   },
   "proj": {
+    "commercial": "commercial projects",
     "TzJs": {
       "desc": "The first version I built. I wanted to add boards as well, but at that time I didn’t have enough knowledge."
     },
@@ -42,6 +43,9 @@
     },
     "Market": {
       "desc": "A mini-market using a free API, featuring catalog and cart."
+    },
+    "Portfolio": {
+      "desc": "My resume's website code"
     }
   }
 }

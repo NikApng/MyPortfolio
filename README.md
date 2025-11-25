@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+🌐 Personal Portfolio – Nikita
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo: https://my-portfolio-pkio.vercel.app
 
-Currently, two official plugins are available:
+Современное персональное портфолио, созданное для демонстрации проектов, навыков и опыта.
+Сайт выполнен на React + TypeScript с использованием Vite и полностью адаптивной вёрстки на TailwindCSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tech Stack
+React 19
+TypeScript
+Vite
+TailwindCSS 4
+i18next (RU/EN перевод)
+CSS-тёмная/светлая тема
+Анимации, UI-компоненты и динамический контент
 
-## React Compiler
+✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Полностью адаптивный дизайн
+Переключение темы (Light / Dark)
+Переключение языка (RU / EN)
 
-## Expanding the ESLint configuration
+Разделы:
+About Me
+Tech Stack
+Projects
+Contacts
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Мультиязычные текстовые ресурсы через i18next
+Быстрая загрузка благодаря Vite
+Хостинг на Vercel
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📁 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+project
+│
+├── public/
+│   ├── icons/
+│   ├── PersonPhoto/
+│   ├── resume/
+│   └── preview/            # ← сюда можно складывать скриншоты
+│
+├── src/
+│   ├── components/         # UI-компоненты
+│   ├── data/               # список технологий, проектов
+│   ├── i18n/               # мультиязычные JSON-файлы
+│   ├── styles/             # глобальные стили, tailwind layers
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠 Installation & Development
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Установить зависимости:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+Запустить проект в dev-режиме:
+
+npm run dev
+
+
+Собрать продакшен билд:
+
+npm run build
+
+
+Локальный предпросмотр билда:
+
+npm run preview
+
+🧩 Deploy (Vercel)
+
+Проект автоматически деплоится через GitHub → Vercel.
+Vercel запускает:
+
+npm install
+npm run build
+
+
+и публикует содержимое dist/.
+
+📬 Contacts
+
+Telegram: https://t.me/nikitos_ia
+
+GitHub: https://github.com/NikApng
+
+📄 License
+
+This project is open-source and free to use for learning purposes.

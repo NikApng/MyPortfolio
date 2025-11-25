@@ -48,7 +48,7 @@ function Header({ onAboutClick, onProjectsClick, onLanguagesClick }: HeaderProps
                     </h1>
                     <img
                         width={50}
-                        src="../../../public/PersonPhoto/Logo/LogoNikApng.png"
+                        src="/PersonPhoto/Logo/LogoNikApng.png"
                         alt="presonal logo"
                         className="rounded-lg w-10 h-10 sm:w-12 sm:h-12 object-cover"
                     />

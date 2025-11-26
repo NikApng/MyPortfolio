@@ -35,7 +35,7 @@ export const projects = [
     {
         id: 6,
         title: "Ruqi.ru",
-        description: "proj.TzJs.desc",
+        description: "proj.Ruqi.desc",
         stack: ["Vue", "JavaScript", "BootStrap"]
     },
     {

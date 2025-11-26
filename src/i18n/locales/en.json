@@ -44,6 +44,9 @@
     "Market": {
       "desc": "A mini-market using a free API, featuring catalog and cart."
     },
+    "Ruqi":{
+      "desc": "Разработка интерфесов и админ панелей"
+    },
     "Portfolio": {
       "desc": "My resume's website code"
     }

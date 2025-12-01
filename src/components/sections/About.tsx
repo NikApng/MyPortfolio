@@ -16,20 +16,19 @@ function About({aboutRef}) {
 
                 <div
                     className="
-        flex flex-col md:flex-row
-        items-center md:items-start
-        gap-12
-        w-full
-        p-10
-        rounded-3xl
-        bg-gray-100
-        dark:bg-[#1d1d1d]
-        shadow-xl
-        dark:shadow-[0_0_25px_rgba(0,0,0,0.5)]
-      "
+                    flex flex-col md:flex-row
+                    items-center md:items-start
+                    gap-12
+                    w-full
+                    p-10
+                    rounded-3xl
+                    bg-gray-100
+                    dark:bg-[#1d1d1d]
+                    shadow-xl
+                    dark:shadow-[0_0_25px_rgba(0,0,0,0.5)]
+                  "
                 >
 
-                    {/* Фото слева */}
                     <div className="flex w-full md:w-1/3 justify-center">
                         <img
                             src="/PersonPhoto/avatar/img.png"
@@ -44,7 +43,6 @@ function About({aboutRef}) {
                         />
                     </div>
 
-                    {/* Текст справа */}
                     <div className="flex-1">
                         <p className="text-2xl font-semibold leading-relaxed dark:text-gray-200">
                             {t('main.aboutMe.p')}

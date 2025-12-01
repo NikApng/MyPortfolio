@@ -41,6 +41,9 @@
     "TzList": {
       "desc": "A task-management app with fast UI and clear structure."
     },
+    "nexora": {
+      "desc": "a new git plus task-management."
+    },
     "Market": {
       "desc": "A mini-market using a free API, featuring catalog and cart."
     },

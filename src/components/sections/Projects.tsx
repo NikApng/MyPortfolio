@@ -1,10 +1,10 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
-import OpendIt from "/public/icons/OpendIt.tsx";
-import {projects} from "@/data/projects";
+import { useTranslation } from "react-i18next";
+import { projects } from "@/data/projects";
+import ProjectCard from "@/components/ui/ProjectCard.tsx";
 
-function Projects({projectsRef}) {
-    const {t} = useTranslation();
+function Projects({ projectsRef }) {
+    const { t } = useTranslation();
 
     return (
         <section
@@ -19,90 +19,16 @@ function Projects({projectsRef}) {
 
                 <div
                     className="
-                            grid
-                            grid-cols-1
-                            sm:grid-cols-2
-                            lg:grid-cols-3
-                            gap-8 sm:gap-10
-                            w-full
-                          "
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            gap-8 sm:gap-10
+            w-full
+          "
                 >
                     {projects.map((proj) => (
-                        <div
-                            key={proj.id}
-                            className="
-                                        bg-gray-100 dark:bg-[#1d1d1d]
-                                        rounded-2xl
-                                        shadow-xl dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
-                                        p-5 sm:p-6
-                                        flex flex-col
-                                        justify-between
-                                        transition
-                                        hover:-translate-y-1
-                                        hover:shadow-2xl
-                                        dark:hover:shadow-[0_0_30px_rgba(0,0,0,0.6)]
-                                        duration-300
-                                      "
-                        >
-                            <div className="space-y-4">
-                                <h2 className="text-xl sm:text-2xl font-bold">
-                                    {proj.title}
-                                </h2>
-
-                                <p className="text-sm sm:text-base">
-                                    {t(`${proj.description}`)}
-                                </p>
-
-                                <div className="flex flex-wrap gap-2 mt-2">
-                                    {proj.stack.map((item) => (
-                                        <span
-                                            key={item}
-                                            className="
-                                                        text-xs sm:text-sm
-                                                        px-3 py-1
-                                                        rounded-lg
-                                                        bg-gray-300 dark:bg-gray-700
-                                                        dark:text-gray-200
-                                                      "
-                                        >{item}</span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {proj.link ? (
-                                <a
-                                    href={proj.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="
-                                                mt-5
-                                                inline-flex items-center gap-1.5
-                                                text-base sm:text-lg font-semibold
-                                                border border-transparent
-                                                hover:border-black dark:hover:border-white
-                                                p-2 rounded-xl
-                                                duration-300
-                                                w-fit
-                                              "
-                                >
-                                    {t("main.projects.open")}
-                                    <OpendIt/>
-                                </a>
-                            ) : (
-                                <span
-                                    className="
-                    mt-5 inline-flex
-                    px-3 py-1
-                    text-xs sm:text-sm
-                    rounded-full
-                    bg-gray-300 dark:bg-gray-700
-                    text-gray-800 dark:text-gray-100
-                  "
-                                >
-                                  {t("proj.commercial")}
-                                </span>
-                            )}
-                        </div>
+                        <ProjectCard key={proj.id} proj={proj} t={t} />
                     ))}
                 </div>
             </div>

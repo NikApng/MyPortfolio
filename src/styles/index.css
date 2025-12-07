@@ -9,3 +9,142 @@ body{
         background: #000;
     }
 }
+
+.tech-tilt{
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    transform: perspective(760px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(0);
+    transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+    transform-style: preserve-3d;
+}
+
+.tech-tilt.is-tilting{
+    box-shadow: 0 22px 55px rgba(0,0,0,0.22), 0 10px 22px rgba(0,0,0,0.16);
+    filter: brightness(1.06) saturate(1.02);
+}
+
+.dark .tech-tilt.is-tilting{
+    box-shadow: 0 22px 55px rgba(0,0,0,0.48), 0 10px 22px rgba(0,0,0,0.38);
+}
+
+.project-tilt{
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    transform: perspective(1050px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(0);
+    transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+    transform-style: preserve-3d;
+}
+
+.project-tilt.is-tilting{
+    box-shadow: 0 16px 38px rgba(0,0,0,0.16), 0 7px 16px rgba(0,0,0,0.12);
+    filter: brightness(1.04) saturate(1.01);
+}
+
+.dark .project-tilt.is-tilting{
+    box-shadow: 0 16px 38px rgba(0,0,0,0.42), 0 7px 16px rgba(0,0,0,0.32);
+}
+
+.orb-field{
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 460px;
+    pointer-events: none;
+    filter: blur(12px);
+    mix-blend-mode: screen;
+    opacity: 0.9;
+}
+
+.orb-field--tall{
+    inset: -18% -8% -12% -8%;
+    height: 520px;
+}
+
+.orb-field--wide{
+    inset: -10% -5% -10% -5%;
+    height: 420px;
+}
+
+.orb{
+    position: absolute;
+    border-radius: 999px;
+    background: hsl(calc(var(--orb-hue, 200) * 1deg) 80% 60% / 0.55);
+    transition: background 200ms linear, transform 240ms ease-out;
+    animation: orb-float 12s ease-in-out infinite;
+}
+
+.orb-1{
+    width: 280px;
+    height: 280px;
+    top: 4%;
+    left: 8%;
+}
+
+.orb-2{
+    width: 220px;
+    height: 220px;
+    top: 16%;
+    right: 12%;
+    background: hsl(calc((var(--orb-hue, 200) + 40) * 1deg) 82% 58% / 0.55);
+    animation-duration: 10s;
+}
+
+.orb-3{
+    width: 200px;
+    height: 200px;
+    bottom: 4%;
+    left: 26%;
+    background: hsl(calc((var(--orb-hue, 200) + 80) * 1deg) 85% 65% / 0.5);
+    animation-duration: 9s;
+}
+
+.orb-4{
+    width: 240px;
+    height: 240px;
+    bottom: 0%;
+    right: 20%;
+    background: hsl(calc((var(--orb-hue, 200) + 120) * 1deg) 78% 62% / 0.48);
+    animation-duration: 11s;
+}
+
+@keyframes orb-float {
+    0% { transform: translate3d(0,0,0) scale(1); }
+    50% { transform: translate3d(12px, -16px, 0) scale(1.04); }
+    100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+.stack-tracer{
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+.stack-tracer-line{
+    stroke-dasharray: 6 8;
+    animation: tracer-dash 1.2s ease infinite;
+    opacity: 0.8;
+}
+
+.stack-tracer-dot{
+    fill: #22d3ee;
+    filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
+}
+
+@keyframes tracer-dash {
+    to { stroke-dashoffset: -60; }
+}
+.project-tilt{
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    transform: perspective(1050px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(0);
+    transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+    transform-style: preserve-3d;
+}
+
+.project-tilt.is-tilting{
+    box-shadow: 0 16px 38px rgba(0,0,0,0.16), 0 7px 16px rgba(0,0,0,0.12);
+    filter: brightness(1.04) saturate(1.01);
+}
+
+.dark .project-tilt.is-tilting{
+    box-shadow: 0 16px 38px rgba(0,0,0,0.42), 0 7px 16px rgba(0,0,0,0.32);
+}

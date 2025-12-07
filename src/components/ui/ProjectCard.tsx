@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import OpendIt from "/public/icons/OpendIt.tsx";
 import Button from "@/components/ui/Button.tsx";
 
@@ -21,6 +21,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isNavHover, setIsNavHover] = useState(false);
 
+    const handleTiltMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+
+        const rotateY = (x - 0.5) * 18; // softer tilt for projects
+        const rotateX = (0.5 - y) * 12;
+
+        card.style.setProperty("--tilt-x", `${rotateX}deg`);
+        card.style.setProperty("--tilt-y", `${rotateY}deg`);
+        card.classList.add("is-tilting");
+    };
+
+    const handleTiltLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = e.currentTarget;
+        card.style.setProperty("--tilt-x", "0deg");
+        card.style.setProperty("--tilt-y", "0deg");
+        card.classList.remove("is-tilting");
+    };
+
     const hasManyImages = images.length > 1;
 
     const handlePrev = (e: React.MouseEvent) => {
@@ -38,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
     return (
         <div
             className="
-        relative group
+        relative group project-tilt
         bg-gray-100 dark:bg-[#1d1d1d]
         rounded-2xl
         shadow-xl dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
@@ -50,6 +71,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
         dark:hover:shadow-[0_0_30px_rgba(0,0,0,0.6)]
         duration-300
       "
+            onMouseMove={handleTiltMove}
+            onMouseLeave={handleTiltLeave}
         >
             <div className="absolute inset-0">
                 <img

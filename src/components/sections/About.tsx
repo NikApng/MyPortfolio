@@ -1,14 +1,22 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import FloatingOrbs from "@/components/ui/FloatingOrbs.tsx";
+import { useScrollHue } from "@/hooks/useScrollHue.ts";
 
 
 function About({aboutRef}) {
     const {t} = useTranslation()
+    const hue = useScrollHue(6, 200);
 
 
     return (
-        <section className="w-full flex items-center justify-center py-20" ref={aboutRef}>
-            <div className="max-w-6xl w-full flex flex-col items-center px-6">
+        <section
+            className="w-full flex items-center justify-center py-20 relative overflow-hidden"
+            ref={aboutRef}
+            style={{ ["--orb-hue" as string]: hue } as React.CSSProperties}
+        >
+            <FloatingOrbs hue={hue} />
+            <div className="max-w-6xl w-full flex flex-col items-center px-6 relative z-10">
 
                 <h1 className="text-4xl font-bold mb-12">
                     {t('main.aboutMe.title')}

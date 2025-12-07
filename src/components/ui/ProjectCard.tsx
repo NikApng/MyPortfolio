@@ -19,6 +19,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
     const images = Array.isArray(proj.imgs) ? proj.imgs : [proj.imgs];
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isNavHover, setIsNavHover] = useState(false);
 
     const hasManyImages = images.length > 1;
 
@@ -72,6 +73,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                     <button
                         type="button"
                         onClick={handlePrev}
+                        onMouseEnter={() => setIsNavHover(true)}
+                        onMouseLeave={() => setIsNavHover(false)}
                         className="
         absolute left-3 top-1/2 -translate-y-1/2
         w-10 h-10 rounded-full
@@ -90,6 +93,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                     <button
                         type="button"
                         onClick={handleNext}
+                        onMouseEnter={() => setIsNavHover(true)}
+                        onMouseLeave={() => setIsNavHover(false)}
                         className="
         absolute right-3 top-1/2 -translate-y-1/2
         w-10 h-10 rounded-full
@@ -107,9 +112,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                 </>
             )}
 
-
-
-            <div className="relative z-10 flex flex-col justify-between h-full">
+            <div
+                className={`
+          relative z-10 flex flex-col justify-between h-full
+          transition-opacity duration-200
+          ${isNavHover ? "opacity-0" : "opacity-100"}
+        `}
+            >
                 <div className="space-y-4">
                     <h2 className="text-xl sm:text-2xl font-bold">
                         {proj.title}
@@ -119,7 +128,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                         {t(proj.description)}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    <div className="flex flex-wrap gap-2 mt-2 ">
                         {proj.stack.map((item) => (
                             <span
                                 key={item}
@@ -131,8 +140,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                   dark:text-gray-200
                 "
                             >
-                {item}
-              </span>
+                                {item}
+                            </span>
                         ))}
                     </div>
                 </div>
@@ -143,16 +152,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
                         target="_blank"
                         rel="noreferrer"
                         className="
-              mt-5
-              inline-flex items-center gap-1.5
-              text-base sm:text-lg font-semibold
-              border border-transparent
-              hover:border-black dark:hover:border-white
-              p-2 rounded-xl
-              duration-300
-              w-fit
+                                  mt-5
+                                  inline-flex items-center gap-1.5
+                                  text-base sm:text-lg font-semibold
+                                  border border-transparent
+                                  hover:border-black dark:hover:border-white
+                                  p-2 rounded-xl
+                                  duration-300
+                                  w-fit
 
-            "
+                                "
                     >
                         {t("main.projects.open")}
                         <OpendIt/>
@@ -168,8 +177,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({proj, t}) => {
               text-gray-800 dark:text-gray-100
             "
                     >
-            {t("proj.commercial")}
-          </span>
+                        {t("proj.commercial")}
+                    </span>
                 )}
             </div>
         </div>

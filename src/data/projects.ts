@@ -13,7 +13,7 @@ export const projects = [
     },
     {
         id: 2,
-        title: "RedFax Messenger",
+        title: "RedFax",
         description: "proj.RedFax.desc",
         imgs: [
             "/projectsPhoto/RedFaxPhoto/img.png",
@@ -28,13 +28,6 @@ export const projects = [
         description: "proj.TzList.desc",
         link: "https://github.com/NikApng/Tz-List-React",
         stack: ["React", "TypeScript", "Tailwind", "Redux Tool Kit"]
-    },
-    {
-        id: 4,
-        title: "Mini-Market",
-        description: "proj.Market.desc",
-        link: "https://github.com/NikApng/Market",
-        stack: ["React", "JavaScript", "Tailwind", "Redux Tool Kit", "Vite"]
     },
     {
         id: 5,
@@ -75,5 +68,17 @@ export const projects = [
         ],
         link: "https://github.com/NikApng/nexora-front",
         stack: ["React", "TypeScript", "Tailwind", "i18n", "React Query", "Zod", "SqlLite", "Next.js"]
+    },
+    {
+        id: 9,
+        title: "XDB",
+        description: "proj.nexora.desc",
+        imgs: [
+            "/projectsPhoto/XDB/img.png",
+            "/projectsPhoto/XDB/img_1.png",
+            "/projectsPhoto/XDB/img_2.png"
+        ],
+        link: "https://github.com/NikApng/nexora-front",
+        stack: ["React", "TypeScript", "Tailwind", "i18n", "Mongo DB", "PHP"]
     }
 ];

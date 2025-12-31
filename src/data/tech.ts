@@ -13,4 +13,6 @@ export const data = [
     {id: 11, title: 'WebPack', img: '/PersonPhoto/iconsStack/img_11.png', link: 'https://webpack.js.org'},
     {id: 12, title: 'Vue', img: '/PersonPhoto/iconsStack/img_10.png', link: 'https://vuejs.org'},
     {id: 13, title: 'Next.js', img: '/PersonPhoto/iconsStack/img_12.png', link: 'https://nextjs.org'},
+    {id: 14, title: 'PHP', img: '/PersonPhoto/iconsStack/image.png', link: 'https://www.php.net/'},
+
 ]

@@ -72,13 +72,13 @@ export const projects = [
     {
         id: 9,
         title: "XDB",
-        description: "proj.nexora.desc",
+        description: "proj.xdb.desc",
         imgs: [
             "/projectsPhoto/XDB/img.png",
             "/projectsPhoto/XDB/img_1.png",
             "/projectsPhoto/XDB/img_2.png"
         ],
         link: "https://github.com/NikApng/nexora-front",
-        stack: ["React", "TypeScript", "Tailwind", "i18n", "Mongo DB", "PHP"]
+        stack: ["React", "TypeScript", "Tailwind", "i18n", "Mongo DB", "PHP", "React Native", "Meteor", "Kotlin"]
     }
 ];

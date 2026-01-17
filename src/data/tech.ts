@@ -14,5 +14,8 @@ export const data = [
     {id: 12, title: 'Vue', img: '/PersonPhoto/iconsStack/img_10.png', link: 'https://vuejs.org'},
     {id: 13, title: 'Next.js', img: '/PersonPhoto/iconsStack/img_12.png', link: 'https://nextjs.org'},
     {id: 14, title: 'PHP', img: '/PersonPhoto/iconsStack/image.png', link: 'https://www.php.net/'},
+    {id: 15, title: 'ZOD', img: '/PersonPhoto/iconsStack/img_13.png', link: 'https://zod.dev/'},
+    {id: 16, title: 'SqlLite', img: '/PersonPhoto/iconsStack/img_14.png', link: ''},
+
 
 ]

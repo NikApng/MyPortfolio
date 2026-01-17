@@ -78,7 +78,7 @@ export const projects = [
             "/projectsPhoto/XDB/img_1.png",
             "/projectsPhoto/XDB/img_2.png"
         ],
-        link: "https://github.com/NikApng/nexora-front",
+        link: "",
         stack: ["React", "TypeScript", "Tailwind", "i18n", "Mongo DB", "PHP", "React Native", "Meteor", "Kotlin"]
     }
 ];
